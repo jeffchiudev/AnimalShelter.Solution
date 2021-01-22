@@ -21,6 +21,14 @@ namespace AnimalShelter.Models
                     new Animal { AnimalId = 4, AnimalName = "Neville", Species = "Dog", Breed = "English Setter", Gender = "Male", Age = 12 },
                     new Animal { AnimalId = 5, AnimalName = "Totoro", Species = "Sprite", Breed = "Unknown", Gender = "NA", Age = 1000 }
                 );
+
+            builder.Entity<Foster>()
+                .HasData(
+                    new Foster { FosterId = 1, FosterName = "Jeff", FosterEmail = "jeff@test.com", FosterAvailability = true },
+                    new Foster { FosterId = 2, FosterName = "Sarah", FosterEmail = "sarah@test.com", FosterAvailability = true },
+                    new Foster { FosterId = 3, FosterName = "Doug", FosterEmail = "Doug@test.com", FosterAvailability = false },
+                    new Foster { FosterId = 4, FosterName = "Leon", FosterEmail = "leon@test.com", FosterAvailability = true }
+                );
         }
     }
 }
