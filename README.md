@@ -1,6 +1,6 @@
 <div align="center">
 
-# TODL v3.0
+# Annie's Animal Shelter Guest Tracker v1.0
 
 </div>
 
@@ -8,14 +8,15 @@
 <img src="https://github.com/jeffchiudev.png" width="200px" height="auto" style="border-radius: 15px 50px;">
 
 </div>
-<h3 align="center">TODO, 22.Jan.2021</h3>
+<h3 align="center">Tracking boarded animals until they find their forever home, 22.Jan.2021</h3>
 <h4 align="center"> By Jeff Chiu</h4>
 
 
 ## About: 
 
 ### Description
-TODO
+
+Animal shelters are already doing so many things to help ownerless animals find thier forever home.  Keeping a  list of the animals currently boarding at the shelter will help workers determine which ones need the most attention to help get adopted.  
 
 ### Technologies Used
 
