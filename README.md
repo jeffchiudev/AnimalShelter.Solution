@@ -2,23 +2,19 @@
 
 # Annie's Animal Shelter API v1.0
 
+<img src="https://github.com/jeffchiudev.png" width="200px" height="auto" style="border-radius: 15px 50px;"><br>
+________________________
+<h3>Tracking boarded animals until they find their forever home, 22.Jan.2021</h3>
+<h4> By Jeff Chiu</h4>
 </div>
-
-<div align="center">
-<img src="https://github.com/jeffchiudev.png" width="200px" height="auto" style="border-radius: 15px 50px;">
-
-</div>
-<h3 align="center">Tracking boarded animals until they find their forever home, 22.Jan.2021</h3>
-<h4 align="center"> By Jeff Chiu</h4>
-
 
 ## About: 
 
-### Description
+### 📖 Description
 
 Animal shelters are already doing so many things to help ownerless animals find their forever home.  Keeping a  list of the animals currently boarding at the shelter and potential fostering parents will make sure the animals are in good care until they find their new home.  
 
-### Technologies Used
+### 🕹️Technologies Used
 
 - Windows 10
 - Visual Studio Code
@@ -27,18 +23,13 @@ Animal shelters are already doing so many things to help ownerless animals find 
 - Entity Framework Core
 - MySQL
 - Postman
-- Swagger - Swashbuckle 5.5.0
+- NSwag.AspNetCore
 
-### User Stories:
-| ID | User Story | Accepted |
-| :--------: | :------: | :-------: |
-||||
+### 🐛 Known Bugs
 
-### Known Bugs
+This is a prototype API
 
-This is a prototype API.
-
-## Software Requirements
+## 🎛️ Software Requirements
 
 ### Browser Requirements: 
 1. Internet browser of choice, [Chrome](https://www.google.com/chrome/?brand=CHBD&brand=FHFK&gclid=CjwKCAiA_9r_BRBZEiwAHZ_v19Z0_XYzZ8NiG2AyZJ9A8ZVQjOBCYIuyRcS3Muc41TZCA_PL0n3s6hoCiaEQAvD_BwE&gclsrc=aw.ds) recommended.
@@ -64,7 +55,35 @@ This is a prototype API.
 2. Open the file. Follow the installation steps.
 3. Confirm the installation is successful by opening your terminal and running the command `dotnet --version`. The response should be something similar to this:`2.2.105`. This means it was successfully installed.
 
-## API Documentation
+### AppSettings
+
+1. Create a new file in the `AnimalShelter.Solution/AnimalShelter` directory named `appsettings.json`
+2. Add in the following code snippet to the new appsettings.json file:
+
+```
+{
+    "Logging": {
+        "LogLevel": {
+        "Default": "Warning"
+        }
+    },
+    "AllowedHosts": "*",
+    "ConnectionStrings": 
+    {
+        "DefaultConnection": "Server=localhost;Port=3306;database=coffee_tracker_api;uid=root;pwd=YourPassword;"
+    }
+}
+```
+3. Change server, port and Id as necessary.  
+
+### Create Database & Launch
+
+1. Navigate to `AnimalShelter.Solution/AnimalShelter` in terminal. 
+2. Run command `dotnet ef database update` to generate database through Entity.
+3. Run command `dotnet watch run` to access API within postman.
+
+
+## 📝 API Documentation
 
 Explore endpoints in Swagger, Postman or browser
 
@@ -88,20 +107,81 @@ DELETE /api/{component}/{id}
 
 #### Query Example
 ```
-https://localhost:5000/api/TODO/131
+https://localhost:5000/api/animals/1
 ```
 
 #### Sample JSON
 ```
 {
-    "Id": 1,
-    "Key1": "Value1",
-    "Key2": "Value2",
+    "animalId": 3,
+    "animalName": "Lester",
+    "species": "Cat",
+    "breed": "American Shorthair",
+    "gender": "Male",
+    "age": 6
 }
 ```
+
+### Animals 
+For accessing information on animals within the shelter
+
+#### HTTP Request Structure
+```
+GET /api/animals
+POST /api/animals
+GET /api/animals/{id}
+PUT /api/animals/{id}
+DELETE /api/animals/{id}
+```
+#### Path Paramters
+| Parameter | Type | Default | Required | Description |
+| :--: | :--: | :--: | :--: | :--: | :--: |
+| Species | string | none | false | Matches by species e.g. dog |
+| Breed | string | none | false | Matches by breed e.g. Spitz |
+| Gender | string | none | false | Matches by gender e.g. Male |
+
+#### Example Query
+```
+http://localhost:5000/api/animals/?species=dog&gender=male&breed=spitz
+```
+#### Sample JSON Response
+```
+{
+    "animalId": 1,
+    "animalName": "Bartleby",
+    "species": "Dog",
+    "breed": "Spitz",
+    "gender": "Male",
+    "age": 2
+}
+```
+
+### Fosters
+For accessing information on potential fosters
+
+#### HTTP Request Structure
+```
+GET /api/fosters
+POST /api/fosters
+GET /api/fosters/{id}
+PUT /api/fosters/{id}
+DELETE /api/fosters/{id}
+```
+#### Sample JSON Response
+```
+{
+    "fosterId": 1,
+    "fosterName": "Jeff",
+    "fosterEmail": "jeff@test.com",
+    "fosterAvailability": true
+}
+```
+
 ## Support and Contact Details
 
-If any errors or bugs occur please email me [here](jeffchiudev@gmail.com).
+If any errors or bugs occur please email me [here](jeffchiudev@gmail.com)
+
+For bugs or pull requests click [here](https://github.com/jeffchiudev/AnimalShelter.Solution/issues)
 
 ### License
 
