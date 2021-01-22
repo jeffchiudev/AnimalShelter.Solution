@@ -22,6 +22,9 @@ namespace AnimalShelter
         {
             services.AddDbContext<AnimalShelterContext>(opt => opt.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddDbContext<AnimalShelterContext>(opt => opt.UseInMemoryDatabase("AnimalShelter"));
+            services.AddMvc();
+            services.AddSwaggerDocument();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,7 +39,9 @@ namespace AnimalShelter
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+            app.UseStaticFiles();
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
             //app.UseHttpsRedirection();
             app.UseMvc();
         }
