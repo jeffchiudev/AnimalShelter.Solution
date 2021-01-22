@@ -1,6 +1,6 @@
 <div align="center">
 
-# Annie's Animal Shelter Guest Tracker v1.0
+# Annie's Animal Shelter API v1.0
 
 </div>
 
@@ -16,7 +16,7 @@
 
 ### Description
 
-Animal shelters are already doing so many things to help ownerless animals find thier forever home.  Keeping a  list of the animals currently boarding at the shelter will help workers determine which ones need the most attention to help get adopted.  
+Animal shelters are already doing so many things to help ownerless animals find their forever home.  Keeping a  list of the animals currently boarding at the shelter and potential fostering parents will make sure the animals are in good care until they find their new home.  
 
 ### Technologies Used
 
@@ -53,9 +53,9 @@ This is a prototype API.
 
 ### Open Locally
 
-1. Click on the link to repository on github [here](https://github.com/jeffchiudev/TODO). 
+1. Click on the link to repository on github [here](https://github.com/jeffchiudev/AnimalShelter.Solution). 
 2. Click on the green "Code" link near the top and above the README.md.
-3. Alternatively open your terminal and use the command `git clone https://github.com/jeffchiudev/TODO` into the directory you would like to clone the repository.
+3. Alternatively open your terminal and use the command `git clone https://github.com/jeffchiudev/AnimalShelter.Solution` into the directory you would like to clone the repository.
 4. Open in text editor to view code.
 
 ### Installing .NET Core
@@ -66,7 +66,7 @@ This is a prototype API.
 
 ## API Documentation
 
-Explore endpoints in Swagger, Postman or broser
+Explore endpoints in Swagger, Postman or browser
 
 ### Using Swagger
 
