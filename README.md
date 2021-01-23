@@ -92,6 +92,10 @@ Explore endpoints in Swagger, Postman or browser
 1. To explore the API with Swashbuckle launch project with `dotnet watch run` within terminal.
 2. Input `http://localhost:5000/swagger`
 
+### RE: CORS
+
+CORS implementation allows for cross-origin requests but exchanges security for laxity.  For more info on CORS, see documentation [here](https://docs.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-2.2#how-cors)
+
 ### Endpoints
 
 Base URL: `https://localhost:5000'

@@ -1,0 +1,20 @@
+@using AnimalShelterClient.Models
+
+@{
+    Layout = "_Layout";
+}
+
+<h1>Animals up for Adoption!</h1>
+<hr/>
+<ol>
+    @foreach (Animal animal in Model);
+    {
+        <ul>
+            <li>Name: @animal.AnimalName</li>
+            <li>Species: @animal.Species</li>
+            <li>Gender: @animal.Gender</li>
+            <li>Age: @animal.Age</li>
+        </ul>
+        <a href="/Animals/Details/@(animal.AnimalId)"><p>View Details</p></a>
+    }
+</ol>
