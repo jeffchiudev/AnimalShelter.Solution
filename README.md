@@ -4,7 +4,7 @@
 
 <img src="https://github.com/jeffchiudev.png" width="200px" height="auto" style="border-radius: 15px 50px;"><br>
 ________________________
-<h3>Tracking boarded animals until they find their forever home, 22.Jan.2021</h3>
+<h3>Tracking boarded animals and potential foster parents, 22.Jan.2021</h3>
 <h4> By Jeff Chiu</h4>
 </div>
 
